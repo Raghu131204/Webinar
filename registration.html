@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212; /* Dark background color */
+            color: #fff; /* White text color */
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #1f1f1f; /* Light container background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #ffcc00; /* Yellow heading color */
+            text-align: center; /* Center the heading */
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 10px;
+            color: #ffcc00; /* Yellow label color */
+        }
+        input, select {
+            margin-bottom: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            background-color: #333;
+            color: #fff;
+        }
+        .radio-group {
+            display: flex;
+            gap: 10px;
+        }
+        .radio-group label {
+            display: flex;
+            align-items: center;
+        }
+        .radio-group input[type="radio"] {
+            accent-color: #ffcc00; /* Dark color when selected */
+        }
+        .button {
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007BFF;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Webinar Registration</h1>
+        <form action="register.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            
+            <label for="gender">Gender:</label>
+            <div class="radio-group">
+                <label><input type="radio" id="male" name="gender" value="Male" required> Male</label>
+                <label><input type="radio" id="female" name="gender" value="Female" required> Female</label>
+                <label><input type="radio" id="other" name="gender" value="Other" required> Other</label>
+            </div>
+            
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="qualification">Qualification:</label>
+            <select id="qualification" name="qualification" required>
+                <option value="">Select Qualification</option>
+                <option value="UG 1st Year">UG 1st Year</option>
+                <option value="UG 2nd Year">UG 2nd Year</option>
+                <option value="UG 3rd Year">UG 3rd Year</option>
+                <option value="UG 4th Year">UG 4th Year</option>
+                <option value="PG 1st Year">PG 1st Year</option>
+                <option value="PG 2nd Year">PG 2nd Year</option>
+                <option value="Others">Others</option>
+            </select>
+            
+            <button type="submit" class="button">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
